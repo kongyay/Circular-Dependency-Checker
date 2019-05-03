@@ -9,7 +9,7 @@ rl.on('line', function (line) {
     if (n === null) {
         let nm = line.trim().split(/\s+/)
         n = parseInt(nm[0]) || inputError('n is not correct..')
-        m = parseInt(nm[0]) || inputError('m is not correct..')
+        m = parseInt(nm[1]) || inputError('m is not correct..')
         if (n > 1000 || n < 1) inputError('n is not in scope (1 ≤ n ≤ 1000)..')
         if (m > n * (n - 1) || m < 1)
             inputError(`m is not in scope (1 ≤ m ≤ ${n * (n - 1)})..`)
